@@ -1,14 +1,14 @@
 import React from 'react';
 import Navbar from './Navbar'
 import Main from './Main'
-import Mainpage from './Mainpage';
-function App() {
+import Content from './Content'
+function Header() {
     return (
-      <div className="App">
+      <div>
         <Navbar/>
         <Main/>
-        <Mainpage/>
+        <Content/>
       </div>
     );
   }
-export default App; 
+export default Header; 

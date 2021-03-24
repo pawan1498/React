@@ -9,7 +9,7 @@ import Home from "./Home";
 import Service from "./Service"
 import Login from "./Login";
 import Service_link1 from "./Service_link1"
-
+import User from './User'
 
 const Main=()=>{
     return(
@@ -19,8 +19,10 @@ const Main=()=>{
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
             <Route exact path='/service' component={Service} />
-            <Route path='/Login' component={Login} />
+            <Route path='/login' component={Login} />
             <Route path='/service/link1' component={Service_link1} />
+            <Route path='/user/' component={User} />
+
             <Route component={Error}></Route>
         </Switch>
         </>
@@ -28,3 +30,4 @@ const Main=()=>{
     );
 }
 export default Main;
+// yha pages/component ke route provide hote h
