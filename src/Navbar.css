@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* navbar start */
+
+#a{
+  position: relative;
+  left:45%;
+}
+
+.main{
+  position: relative;
+  display: fixed;
+  font-family: 'Lato', sans-serif;
+  
+}
+li,button:hover{
+  display: block;
+  color:rgb(4, 21, 66);
+}
+
+/* menu icon  */
+.menu{
+  display: none;
+  position: absolute;
+  top: 0px;
+  bottom: auto;
+}
+.menuicon {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+/* menu icon end  */
+
+@media only screen and (max-width: 1000px) {
+  .main {
+    background-color: red;
+  }
+  .menu{
+    display: block;
+  }
+  .l1,.l2,.l3,.l4,.l5,.l6{
+    display: none;
+  }
+  button{
+    display: none;
+  }
+  li{
+    display: none;
+  }
+}
+
+  /* dropdown  code start */
+.dropbtn {
+  background-color: ;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: lightblue ;}
+
+  /* dropdown end  */
+/* navbar end */
+
+
+
+/* new css applied from here */
+
+#input{
+  display: none;
+}
+
+#div1:hover{
+   background-color: lightgreen;
+}
+
+#btn1:hover  +  #input {
+  display: block;
+  /* background-color: lightgreen; */
+}
+

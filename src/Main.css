@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 /* navbar start */
+
 #a{
   position: relative;
   left:45%;
@@ -14,9 +15,42 @@
   
 }
 li,button:hover{
+  display: block;
   color:rgb(4, 21, 66);
 }
 
+/* menu icon  */
+.menu{
+  display: none;
+  position: absolute;
+  top: 0px;
+  bottom: auto;
+}
+.menuicon {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+/* menu icon end  */
+
+@media only screen and (max-width: 1000px) {
+  .main {
+    background-color: red;
+  }
+  .menu{
+    display: block;
+  }
+  .l1,.l2,.l3,.l4,.l5,.l6{
+    display: none;
+  }
+  button{
+    display: none;
+  }
+  li{
+    display: none;
+  }
+}
 
   /* dropdown  code start */
 .dropbtn {
@@ -56,3 +90,24 @@ li,button:hover{
 
   /* dropdown end  */
 /* navbar end */
+
+
+
+/* new css applied from here */
+
+#input{
+  display: none;
+}
+
+#div1:hover{
+   background-color: lightgreen;
+}
+
+#btn1:hover  +  #input {
+  display: block;
+  /* background-color: lightgreen; */
+}
+
+.hide{
+    display: none;
+}

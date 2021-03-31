@@ -1,47 +1,51 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import logo from './webappraise.png'
+// import logo from './webappraise.png'
 import SearchIcon from '@material-ui/icons/Search';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "tachyons";
-import './Header.css';
+import './Navbar.css';
 import Login from './Login'
+import onclick from './Onclick'
 
 const Navbar = () => {
-    function login() {
-        console.log("login");
-        return (<Login/>);
-    
-    }
-    return (
-        <>
-            <div className=" main db bg-light-blue ">
-                <img className="dib  ml3 pa2 grow" src={logo} alt="web appraise"></img>
-                <ul className=" dib " id="a">
-                    <li className="dib  ma2 "> <Link to="/">HOME </Link></li>
 
-                    <div className="dropdown">
-                        <li className="dib  ma2 dropbtn " > <Link to="/service">SERVICE</Link></li>
-                        <div className="dropdown-content">
-                            <Link to="/service/link1">link 1</Link>
-                            <Link to="/service/link2">link 2</Link>
-                            <Link to="/service/link3">link 3</Link>
-                            <Link to="/login">login</Link>
-                            <Link to="/user">user</Link>
-                            <br></br>
-                        </div>
-                    </div>
-                    <li className="dib  ma2 "> <Link exact to="/about">ABOUT</Link>  </li>
-                    <li className="dib  ma2 "> <Link exact to="/contact">CONTACT</Link> </li>
-                    <li className="dib  ma2 "><a href="/search">SEARCH <SearchIcon /> </a></li>
-                    <button className="dib btn btn-primary ml3 grow" onClick={<login/>} > login </button>
-                </ul>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a className="navbar-brand" href="#">LOGO</a>
+
+          <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Link</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Categories</a>
+            </li>
+           
+          </ul>
+
+          <form className=" form-inline my-2 my-lg-0">
+            {/* <div id="div1">pawan</div> */}
+            <button className=" btn btn-navbar" id="btn1" type="submit" onClick={onclick()}>
+              <SearchIcon />
+            </button>
+            <input className="form-control mr-sm-2" id="input" type="search" placeholder="Search" aria-label="Search" />
+            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">login{Login}</button>
+          </form>
+        </div>
+      </nav>
+
+
+    </>
+  );
 
 }
-
-// yha link declare hota h 
-
 export default Navbar;
