@@ -1,13 +1,33 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-// import logo from './webappraise.png'
 import SearchIcon from '@material-ui/icons/Search';
+import CancelIcon from '@material-ui/icons/Cancel';
+import Footer from './Footer'
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "tachyons";
 import './Navbar.css';
-import Login from './Login'
-import onclick from './Onclick'
+import { Brightness1 } from '@material-ui/icons';
+const search = () => {
+  console.log(1);
+  var btn = document.getElementById('input');
+  var cancel = document.getElementById('cancel');
+  var search = document.getElementById('search');
 
+  btn.style.display = "none";
+  if (btn.style.display === "none") {
+    cancel.style.display ="inline-flex"
+    btn.style.display = "inline-flex";
+    search.style.display = "none";
+  } 
+}
+const cancel = ()=>{
+  console.log(2);
+  var btn = document.getElementById('input');
+  var cancel = document.getElementById('cancel');
+  var search = document.getElementById('search');
+  cancel.style.display ="none"
+  btn.style.display = "none";
+  search.style.display = "inline-flex";
+}
 const Navbar = () => {
 
   return (
@@ -29,23 +49,22 @@ const Navbar = () => {
             <li className="nav-item">
               <a className="nav-link" href="#">Categories</a>
             </li>
-           
+
           </ul>
 
           <form className=" form-inline my-2 my-lg-0">
-            {/* <div id="div1">pawan</div> */}
-            <button className=" btn btn-navbar" id="btn1" type="submit" onClick={onclick()}>
-              <SearchIcon />
-            </button>
-            <input className="form-control mr-sm-2" id="input" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">login{Login}</button>
+            <div>
+            <input  id="input" className="input form-control "  type="search" placeholder="Search" aria-label="Search"   />
+            <button id="cancel" className="btn btn-navbar" onClick={cancel}><CancelIcon/></button>
+            </div>
+            <button id="search"className="btn btn-navbar"  type="submit" onClick={search}><SearchIcon /></button>
+            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">login</button>
           </form>
         </div>
       </nav>
 
-
+    <Footer/> 
     </>
   );
-
 }
 export default Navbar;

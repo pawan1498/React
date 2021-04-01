@@ -53,13 +53,6 @@ li,button:hover{
 }
 
   /* dropdown  code start */
-.dropbtn {
-  background-color: ;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-}
 
 .dropdown {
   position: relative;
@@ -94,17 +87,6 @@ li,button:hover{
 
 
 /* new css applied from here */
-
-#input{
+#cancel,#input{
   display: none;
 }
-
-#div1:hover{
-   background-color: lightgreen;
-}
-
-#btn1:hover  +  #input {
-  display: block;
-  /* background-color: lightgreen; */
-}
-
