@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
-import Header from './Header'
+import Home from './Home'
 import 'font-awesome/css/font-awesome.min.css';
 
 ReactDOM.render(
   <BrowserRouter>
-    <Header />
+    <Home />
   </BrowserRouter>
   , document.getElementById('root'),
 );

@@ -1,11 +1,7 @@
 import React from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "tachyons";
-import './Navbar.css';
-import './Navbar2.css';
-
-// import Login from './Login'
-//import Onclick from './Onclick'
+import './css/Navbar.css';
 
 function showSearch() {
   var srchbtn = document.getElementById("srchbtn");
@@ -51,11 +47,8 @@ const Navbar = () => {
               <i class="fa fa-times-circle" aria-hidden="true" id="close" onClick={closeSearch}></i>
             </form>
             </div>
-
       </nav>
-      <br/>
 
-      
     </>
   );
  
