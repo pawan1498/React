@@ -1,92 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Ubuntu:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* body{
+  color: whitesmoke;
+} */
 
-/* navbar start */
-
-#a{
-  position: relative;
-  left:45%;
+.navbar{
+  min-height: 70px;
+  background-color: #2f5d62;
+}
+.logo{
+  margin-left: 30px;
+}
+.user{
+  font-size: 25px;
 }
 
-.main{
-  position: relative;
-  display: fixed;
-  font-family: 'Lato', sans-serif;
-  
-}
-li,button:hover{
-  display: block;
-  color:rgb(4, 21, 66);
+#r{
+  left: auto;
+  display: inline-flex;
+  margin-right: 30px;
 }
 
-/* menu icon  */
-.menu{
+.searchinp{
+  border: none;
+  border-radius: 2px;
+  padding: 25px 0;
+}
+
+.form{
+  margin: auto ;
   display: none;
-  position: absolute;
-  top: 0px;
-  bottom: auto;
+  width: 70%;
 }
-.menuicon {
-  width: 35px;
-  height: 5px;
-  background-color: black;
-  margin: 6px 0;
-}
-/* menu icon end  */
-
-@media only screen and (max-width: 1000px) {
-  .main {
-    background-color: red;
-  }
-  .menu{
-    display: block;
-  }
-  .l1,.l2,.l3,.l4,.l5,.l6{
-    display: none;
-  }
-  button{
-    display: none;
-  }
-  li{
-    display: none;
-  }
+.srchbtn{
+  color: #f5f5f5;
+  margin: 3px 20px 0 -30px;
+  font-size: 20px;
 }
 
-  /* dropdown  code start */
-
-.dropdown {
-  position: relative;
-  display: inline-block;
+.btn{
+  background-color: rgb(187, 182, 182);
+  margin-left: -38px;
+  border-radius: 2px;
+  padding: 10px 40px;
 }
 
-.dropdown-content {
+#close{
+  font-size: 25px;
+  margin: 11px 5px 0 5px;
+}
+
+#searchbar{
+  background-color: #2f5d62;
+  min-height: 60px;   
   display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: lightblue ;}
-
-  /* dropdown end  */
-/* navbar end */
-
-
-
-/* new css applied from here */
-#cancel,#input{
-  display: none;
+  padding: 25px;
 }

@@ -1,14 +1,15 @@
 import React from 'react';
 import Navbar from './Navbar'
+import Footer from './Footer'
 import Main from './Main'
 // import Content from './Content'
-function Header() {
+function Home() {
     return (
       <div>
         <Navbar/>
         <Main/>
-        {/* <Content/> */}
+        <Footer/> 
       </div>
     );
   }
-export default Header; 
+export default Home; 

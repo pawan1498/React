@@ -1,70 +1,66 @@
 import React from 'react';
-import SearchIcon from '@material-ui/icons/Search';
-import CancelIcon from '@material-ui/icons/Cancel';
-import Footer from './Footer'
+import { Link } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "tachyons";
 import './Navbar.css';
-import { Brightness1 } from '@material-ui/icons';
-const search = () => {
-  console.log(1);
-  var btn = document.getElementById('input');
-  var cancel = document.getElementById('cancel');
-  var search = document.getElementById('search');
 
-  btn.style.display = "none";
-  if (btn.style.display === "none") {
-    cancel.style.display ="inline-flex"
-    btn.style.display = "inline-flex";
-    search.style.display = "none";
-  } 
+// import Login from './Login'
+//import Onclick from './Onclick'
+
+function showSearch() {
+  var srchbtn = document.getElementById("srchbtn");
+  srchbtn.style.display = "none"
+  var srchbar = document.getElementById("searchbar");
+  srchbar.style.display = "block";
+  
+  var frm = document.getElementById("form");
+  frm.style.display = "flex";
+  // frm.style.
 }
-const cancel = ()=>{
-  console.log(2);
-  var btn = document.getElementById('input');
-  var cancel = document.getElementById('cancel');
-  var search = document.getElementById('search');
-  cancel.style.display ="none"
-  btn.style.display = "none";
-  search.style.display = "inline-flex";
+
+function closeSearch() {
+  var frm = document.getElementById("form");
+  var srchbtn = document.getElementById("srchbtn");
+  var srchbar = document.getElementById("searchbar");
+
+  srchbar.style.display = "none";
+  srchbtn.style.display = "";
+  frm.style.display = "none";
 }
+
+
 const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a className="navbar-brand" href="#">LOGO</a>
+      <nav>
+        <div className="navbar">
+            <div className="logo"> HANDCRAFT</div>
 
-          <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Categories</a>
-            </li>
+            <div id="r">
 
-          </ul>
+            <div className="srchbtn" id="srchbtn" onClick={showSearch} >   <Link to="/search"><i class="fa fa-search" aria-hidden="true" id="sbtn"></i></Link> </div>
+            <div className="user"><Link to="/login"><i class="fa fa-user-circle" aria-hidden="true"></i></Link></div>
 
-          <form className=" form-inline my-2 my-lg-0">
-            <div>
-            <input  id="input" className="input form-control "  type="search" placeholder="Search" aria-label="Search"   />
-            <button id="cancel" className="btn btn-navbar" onClick={cancel}><CancelIcon/></button>
+            <div className="user"><Link to="/cart">&nbsp;&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></Link></div>
+            
             </div>
-            <button id="search"className="btn btn-navbar"  type="submit" onClick={search}><SearchIcon /></button>
-            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">login</button>
-          </form>
         </div>
-      </nav>
 
-    <Footer/> 
+        <div className="searchbar w3-animate-top" id="searchbar">
+            <form className="form  " id="form">
+              <input className="searchinp form-control"  placeholder="&nbsp;&nbsp;&nbsp;Search" />
+              <button type="submit" className="btn"><i class="fa fa-search" aria-hidden="true" id="sbtn"></i></button> 
+              <i class="fa fa-times-circle" aria-hidden="true" id="close" onClick={closeSearch}></i>
+            </form>
+            </div>
+
+      </nav>
+      <br/>
+
+      
     </>
   );
+ 
 }
 export default Navbar;
