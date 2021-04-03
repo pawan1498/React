@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "tachyons";
 import './Navbar.css';
-import './Navbar2.css';
 
 // import Login from './Login'
 //import Onclick from './Onclick'
@@ -11,10 +11,10 @@ function showSearch() {
   var srchbtn = document.getElementById("srchbtn");
   srchbtn.style.display = "none"
   var srchbar = document.getElementById("searchbar");
-  srchbar.style.display = "flex";
+  srchbar.style.display = "block";
   
   var frm = document.getElementById("form");
-  frm.style.display = "inline-flex";
+  frm.style.display = "flex";
   // frm.style.
 }
 
@@ -35,18 +35,21 @@ const Navbar = () => {
     <>
       <nav>
         <div className="navbar">
-            <div className="logo"> HANDCRAFT</div>
+            <div className="logo"><Link to='/'>HANDCRAFT</Link> </div>
 
             <div id="r">
 
-            <div className="srchbtn" id="srchbtn" onClick={showSearch} > <i class="fa fa-search" aria-hidden="true" id="sbtn"></i></div>
-            <div className="user"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
+            <div className="srchbtn" id="srchbtn" onClick={showSearch} >   <Link to="/search"><i class="fa fa-search" aria-hidden="true" id="sbtn"></i></Link> </div>
+            <div className="user"><Link to="/login"><i class="fa fa-user-circle" aria-hidden="true"></i></Link></div>
+
+            <div className="user"><Link to="/cart">&nbsp;&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></Link></div>
+            
             </div>
         </div>
 
-        <div className="searchbar" id="searchbar">
-            <form className="form  w3-center w3-animate-right " id="form">
-              <input className="searchinp form-control"  placeholder="Search"  />
+        <div className="searchbar w3-animate-top" id="searchbar">
+            <form className="form  " id="form">
+              <input className="searchinp form-control"  placeholder="&nbsp;&nbsp;&nbsp;Search" />
               <button type="submit" className="btn"><i class="fa fa-search" aria-hidden="true" id="sbtn"></i></button> 
               <i class="fa fa-times-circle" aria-hidden="true" id="close" onClick={closeSearch}></i>
             </form>
@@ -61,6 +64,3 @@ const Navbar = () => {
  
 }
 export default Navbar;
-
-
-
