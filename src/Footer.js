@@ -5,6 +5,7 @@ const Footer = () => {
     return (
     <>
      {/* Remove the container if you want to extend the Footer to full width. */}
+     <footer>
      <div className="footer">
      <div className="fluid ">
         {/* Footer */}
@@ -122,6 +123,7 @@ const Footer = () => {
       </div>
       {/* End of .container */}
       </div>
+      </footer>
     </>
 
     );
