@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .github/
+.firebase/
 .firebaserc
 firebase-debug.log
 firebase.json
