@@ -1,1 +1,7 @@
 /node_modules
+.firebaserc
+.github/
+database.rules.json
+firebase-debug.log
+firebase.json
+
