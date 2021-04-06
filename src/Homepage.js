@@ -153,6 +153,7 @@ function Homepage(){
  </div>
  </div>
 {/* TRENDING end */}
+      
         </>
     );
 }
