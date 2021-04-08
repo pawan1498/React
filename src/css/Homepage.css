@@ -1,0 +1,82 @@
+@font-face{
+  font-family: nunitoNew;
+  src: url(../fonts/Nunito/Nunito-SemiBold.ttf)
+}
+
+.aa {
+  height: 200px;
+}
+
+/* css for scroll menu  */
+
+.scrolling-wrapper {
+  overflow-x: auto;
+}
+
+.smenu {
+  background-color: black;
+  color: #fff;
+  font-family: "system-ui";
+  margin: 2px;
+}
+
+#scmenu::-webkit-scrollbar{
+  display: none;
+}
+
+#scmenu:hover  #scmenu::-webkit-scrollbar{
+  display: "";
+}
+
+
+
+h1 {
+  font-weight: 500;
+  font-size: 2em;
+}
+
+.subtitle {
+  font-size: 1.25em;
+  opacity: 0.65;
+}
+
+.card-block {
+  height: 150px;
+  width: 150px;
+  background-color: #fff;
+  border: none;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.2s ease-in-out !important;
+  border-radius: 24px;
+}
+
+.card-block:hover {
+  transform: translateY(-5px);
+  box-shadow: none;
+}
+
+
+.abc {
+  min-height: 600px;
+}
+
+.crsl {
+  min-height: 400px;
+  color: black;
+  border-top: 5px solid #61b15a;
+  border-bottom: 5px solid #61b15a;
+}
+
+.quick-menu ul>li{
+  display: inline-block;
+  margin-right: 30px;
+  font-family: nunitoNew;
+  font-size: 17px;
+}
+
+@media screen and (max-width:600px){
+  .quick-menu ul>li{
+    font-size: 14px;
+  }
+}

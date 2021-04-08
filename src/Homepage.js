@@ -1,16 +1,25 @@
-import './Homepage.css'
+import './css/Homepage.css'
+import './css/extra.css'
 import { Carousel } from 'react-bootstrap';
-import aa from './aa.webp'
-import bb from './bb.webp'
-import cc from './cc.jpg'
+import aa from './img/aa.webp'
+import bb from './img/bb.webp'
+import cc from './img/cc.jpg'
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function Homepage(){
-    return(
+    return( 
         <> 
-        {/* crousel start*/} 
-        <div class="crsl">
-
+        <div className="container-fluid quick-menu">
+          <ul>
+            <li>Mens</li>
+            <li>Womens</li>
+            <li>Kids</li>
+            <li>Offers</li>
+            <li>Deals</li>
+          </ul>
+        </div>
+        {/* crousel start*/}
+<div class="crsl">
 <Carousel fade >
   <Carousel.Item>
     <img
@@ -39,28 +48,28 @@ function Homepage(){
 </Carousel>
 </div>
         {/* crousel end */}
-   <div class="container-fluid  aa ">
-  <div class="row ">
-    <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
-      1 One of three columns
-    </div>
-    <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
-      2 One of three columns
-    </div>
-    <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
-      3 One of three columns
-    </div> 
-    <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
-      4 One of three columns
-    </div>
-    <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
-      5 One of three columns
-    </div>
-    <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
-      6  One of three columns
-    </div>
+  {/* <div class="container-fluid  aa ">
+<div class="row ">
+  <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
+    1 One of three columns
   </div>
- </div>
+  <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
+    2 One of three columns
+  </div>
+  <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
+    3 One of three columns
+  </div> 
+  <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
+    4 One of three columns
+  </div>
+  <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
+    5 One of three columns
+  </div>
+  <div class="col-lg-2 col-sm-5  border text-center mx-3 my-1">
+    6  One of three columns
+  </div>
+</div>
+</div> */}
 
 {/* <div className="container border"> */}
         {/* Stack the columns on mobile by making one full-width and the other half-width */}
@@ -82,14 +91,14 @@ function Homepage(){
       {/* </div> */}
 
       {/* scroll menu */}
-      <div className="container-fluid smenu">
+      {/* <div className="container-fluid smenu" >
         <h1 className="mt-5">Deals Of The Day</h1>
         <p className="subtitle">GRAb the best deal on home appliance ,fashion ,electronics </p>
-        <div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
-          <div className="col">
+        <div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2" id="scmenu">
+          <div className="col-md">
             <div className="card card-block card-1" />
           </div>
-          <div className="col">
+          <div className="col-md">
             <div className="card card-block card-2" />
           </div>
           <div className="col">
@@ -117,7 +126,7 @@ function Homepage(){
             <div className="card card-block card-10" />
           </div>
         </div>
-      </div>
+      </div> */}
         </>
     );
 }

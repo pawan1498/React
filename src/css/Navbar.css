@@ -1,13 +1,25 @@
-/* body{
-  color: whitesmoke;
-} */
+@font-face{
+  font-family: nunitoNew;
+  src: url(../fonts/Nunito/Nunito-SemiBold.ttf)
+}
 
 .navbar{
   min-height: 70px;
-  background-color: #2f5d62;
+  background-color: #61b15a;
+  font-family: nunitoNew;
+
+}  
+
+#w-t-d-none{
+  color: whitesmoke;
+  text-decoration: none;
 }
-.logo{
+
+.logo { 
   margin-left: 30px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 20px;
 }
 .user{
   font-size: 25px;
