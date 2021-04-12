@@ -1,6 +1,11 @@
 @font-face{
-  font-family: nunitoNew;
-  src: url(../fonts/Nunito/Nunito-SemiBold.ttf)
+
+  font-family: nunitoSemiBold;
+  src: url(../fonts/Nunito/Nunito-SemiBold.ttf);
+
+  font-family: nunitoExtraBold;
+  src: url(../fonts/Nunito/Nunito-ExtraBold.ttf);
+
 }
 
 .aa {
@@ -62,7 +67,6 @@ h1 {
 }
 
 .crsl {
-  min-height: 400px;
   color: black;
   border-top: 5px solid #61b15a;
   border-bottom: 5px solid #61b15a;
@@ -71,7 +75,7 @@ h1 {
 .quick-menu ul>li{
   display: inline-block;
   margin-right: 30px;
-  font-family: nunitoNew;
+  font-family: nunitoSemiBold;
   font-size: 17px;
 }
 
@@ -80,3 +84,31 @@ h1 {
     font-size: 14px;
   }
 }
+
+.banner-card{
+  height:300px;
+  width: 100%;
+  }
+
+  .banner-text h2{
+    text-align: center;
+    color: #61b15a;
+    font-weight: 900;
+   }
+   
+   .banner-text{
+       text-align: center;
+       color: gray;
+       font-family: nunitoExtraBold;
+       letter-spacing: 3px;
+   }
+   
+   .banner-card img{
+      width: inherit;
+      height: inherit;
+      object-fit: cover;  
+   }
+
+   .best-seller .col{
+     margin: 5px;
+   }

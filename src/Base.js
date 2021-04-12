@@ -70,14 +70,14 @@ function Base() {
         {/* Footer */}
         <footer className="text-center text-lg-start text-dark" style={{backgroundColor: '#ECEFF1'}}>
           {/* Section: Social media */}
-          <section className="d-flex justify-content-between p-4 text-white" style={{backgroundColor: '#21D192'}}>
+          <section className="d-flex justify-content-between p-4 text-white" style={{backgroundColor: '#61b15a'}}>
             {/* Left */}
             <div className="me-5">
               <span>Get connected with us on social networks:</span>
             </div>
             {/* Left */}
             {/* Right */}
-            <div>
+            <div className="footer-social">
               <a href className="text-white me-4">
                 <i className="fa fa-facebook-f" />
               </a>
