@@ -90,7 +90,7 @@ function Homepage(){
           </div>
         </div>
       </div>
-
+  
       {/* scroll menu end */}
 
       {/* categories START*/}
@@ -98,23 +98,23 @@ function Homepage(){
   <h1 className="mt-5">CATEGORIES</h1>
   <p className="subtitle"> let put it on your bag  </p>
   <div class="row mt-4 pb-4 pt-2">
-    <div class="col-lg-2 col-md-2  aa text-center mx-3 my-1">
+    <div class="col-lg-2 col-md-3 col aa text-center mx-3 my-1">
       <img src={cat1} className="cate_img"></img>
       <p>1 One of three columns</p>
     </div>
-    <div class="col-lg-2 col-md-2  aa text-center mx-3 my-1">
+    <div class="col-lg-2 col-md-3 col aa text-center mx-3 my-1">
       <img src={cat2} className="cate_img"></img>
       <p>2 One of three columns</p>
     </div>
-    <div class="col-lg-2 col-md-2  aa text-center mx-3 my-1">
+    <div class="col-lg-2 col-md-3 col aa text-center mx-3 my-1">
       <img src={cat3} className="cate_img"></img>
       <p>3 One of three columns</p>
     </div> 
-    <div class="col-lg-2 col-md-2  aa text-center mx-3 my-1">
+    <div class="col-lg-2 col-md-3 col aa text-center mx-3 my-1">
       <img src={cat4} className="cate_img"></img>
       <p>4 One of three columns</p>
     </div>
-    <div class="col-lg-2 col-md-2  aa text-center mx-3 my-1">
+    <div class="col-lg-2 col-md-3 col aa text-center mx-3 my-1">
       <img src={cat5} className="cate_img"></img>
       <p>5 One of three columns</p>
     </div>
