@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>  // problem 1 need to add this
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div className="container">
+        <p id="msg"> please sign in </p>
+        <button className="btn btn-primary" onClick={googleSignIn}>GOOGLE SIGN IN</button> <br /> <br />  
+        <h3>LOGIN WITH PHONE NUMBER</h3>
+        <div id="recaptcha"></div>
+        <label></label>
+        <div>
+                <div className="form-group">
+                    <input type="number" className="form-control " />
+                </div>
+                <button className="btn btn-primary" onclick="handleClick()">Click here</button> // problem 2 onclick intead of onClick
+        </div>
+    </div>
+<script>
+    const firebaseConfig = {
+            apiKey: "AIzaSyDOiTJIGjMUobuDxmPnAsIHhpU1OYSqaxU",
+            authDomain: "connect-db-78992.firebaseapp.com",
+            databaseURL: "https://connect-db-78992-default-rtdb.firebaseio.com",
+            projectId: "connect-db-78992",
+            storageBucket: "connect-db-78992.appspot.com",
+            messagingSenderId: "370454637896",
+            appId: "1:370454637896:web:7fcfdf18d3e3549d9d177d",
+            measurementId: "G-ST1X0ZKMYD"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+   function handleClick() { // function not defied --- due to handleClick = () => {} format
+        let recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha', {'size': 'invisible'});
+        document.querySelector('label').textContent = "captcha solved";
+        let number = '+919821977079';
+        firebase.auth().signInWithPhoneNumber(number,recaptcha).then(function(e){
+            
+            let code = prompt('enter otp', '')
+
+            if(code == null) {
+                return;
+            }
+        
+            e.confirm(code).then(function(result){
+                console.log(result.user, 'user');
+                document.querySelector('label').textContent = result.user.phoneNumber + "Number Verified";
+            }).catch((error)=>{
+                console.log(error)
+            })
+    
+
+        })
+    }
+</script>
+
+</body>
+
+</html>
