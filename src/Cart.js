@@ -1,8 +1,22 @@
-function Cart(){
-    return(
+import "./css/cart.css"
+import shoes1 from "./img/shoes1.webp";
+import shoes2 from "./img/shoes2.webp";
+
+function Cart() {
+    return (
         <>
-        <h1>Cart</h1>
-        <h2>check your cart here </h2>
+            <div className="container">
+                <div className="itemCard">
+                    <img src={shoes1}alt="" id="itemImg" />
+
+                    <div className="itemDesc">
+                    <p>Product Name</p>
+                    <p>Small Description</p>
+                    <p>price</p>
+                    </div>
+                    
+                </div>
+            </div>
         </>
     );
 }

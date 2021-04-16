@@ -1,24 +1,83 @@
-import React from 'react'
-import './Footer.css'
-const Footer = () => {
+import React from 'react';
+import { Link } from "react-router-dom";
 
+// Components
+import Main from './Main'
+
+// StyleSheets
+import './css/Footer.css'
+import './css/Navbar.css';
+
+
+function showSearch() {
+  var srchbtn = document.getElementById("srchbtn");
+  srchbtn.style.display = "none"
+  var srchbar = document.getElementById("searchbar");
+  srchbar.style.display = "block";
+
+  var frm = document.getElementById("form");
+  frm.style.display = "flex";
+}
+
+function closeSearch() {
+  var frm = document.getElementById("form");
+  var srchbtn = document.getElementById("srchbtn");
+  var srchbar = document.getElementById("searchbar");
+
+  srchbar.style.display = "none";
+  srchbtn.style.display = "";
+  frm.style.display = "none";
+}
+
+
+function Base() {
     return (
-    <>
-     {/* Remove the container if you want to extend the Footer to full width. */}
-     <footer>
+      <div>
+        {/* <Navbar/> */}
+        <nav>
+        <div className="navbar">
+          <div className="logo" id="logo"><Link to='/' id="w-t-d-none" >HANDCRAFT</Link> </div>
+
+          <div id="r">
+
+            <div className="srchbtn" id="srchbtn" onClick={showSearch} >   <Link to="/search" id="w-t-d-none" ><i class="fa fa-search" aria-hidden="true" id="sbtn"></i></Link> </div>
+
+            <div className="user"><Link to="/login" id="w-t-d-none" ><i class="fa fa-user-circle" aria-hidden="true"></i></Link></div>
+
+            <div className="user"><Link to="/cart" id="w-t-d-none"   >&nbsp;&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></Link></div>
+
+          </div>
+        </div>
+
+        <div className="searchbar w3-animate-top" id="searchbar">
+          <form className="form  " id="form">
+            <input className="searchinp form-control" placeholder="&nbsp;&nbsp;&nbsp;Search" />
+            <button type="submit" className="btn"><i class="fa fa-search" aria-hidden="true" id="sbtn"></i></button>
+            <i class="fa fa-times-circle" aria-hidden="true" id="close" onClick={closeSearch}></i>
+          </form>
+        </div>
+
+      </nav>
+      <br />
+        {/* <Navbar/> */}
+
+        <Main/>
+
+        {/* <Footer/>  */}
+        <footer>
      <div className="footer">
      <div className="fluid ">
         {/* Footer */}
         <footer className="text-center text-lg-start text-dark" style={{backgroundColor: '#ECEFF1'}}>
           {/* Section: Social media */}
-          <section className="d-flex justify-content-between p-4 text-white" style={{backgroundColor: '#21D192'}}>
+          <section className="d-flex justify-content-between p-4 text-white" style={{backgroundColor: '#61b15a'}}>
             {/* Left */}
             <div className="me-5">
               <span>Get connected with us on social networks:</span>
             </div>
             {/* Left */}
             {/* Right */}
-            <div>
+            <div className="footer-social">
               <a href className="text-white me-4">
                 <i className="fa fa-facebook-f" />
               </a>
@@ -124,9 +183,8 @@ const Footer = () => {
       {/* End of .container */}
       </div>
       </footer>
-    </>
-
+        {/* <Footer/>  */}
+      </div>
     );
-}
-
-export default Footer;
+  }
+export default Base; 

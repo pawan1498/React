@@ -1,0 +1,26 @@
+@font-face{
+    font-family: nunitoSemiBold;
+    src: url(../fonts/Nunito/Nunito-SemiBold.ttf);
+
+    font-family: nunitoExtraBold;
+    src: url(../fonts/Nunito/Nunito-ExtraBold.ttf);
+
+  }
+  
+.footer {
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer-social a i{
+    margin-right: 15px;
+    font-size: 23px;
+    opacity: .9;
+}
+
+.footer-social a i:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
