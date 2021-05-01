@@ -20,4 +20,3 @@ const Main=()=>{
     );
 }
 export default Main;
-// yha pages/component ke route provide hote h
