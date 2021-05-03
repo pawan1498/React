@@ -1,8 +1,10 @@
 import React from 'react';
+import Main from './Main'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 function Base(){
  return (
    <>
-   <h1>welcome home </h1>
+   <Main/>
    </>
  )
 }
